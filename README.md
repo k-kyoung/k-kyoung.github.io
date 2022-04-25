@@ -69,7 +69,8 @@ v1.0.0 이후 지원을 위한 메뉴 정의, 먼저 초기버전을 완성한�
 참고 테마
 [Phantom](https://www.codeblocq.com/assets/projects/hexo-theme-phantom/), 
 [Tranquilpeak](https://louisbarranqueiro.github.io/hexo-theme-tranquilpeak/), 
-[Magnetic](https://www.codeblocq.com/assets/projects/hexo-theme-magnetic/)
+[Magnetic](https://www.codeblocq.com/assets/projects/hexo-theme-magnetic/),
+[codeblocq](https://www.codeblocq.com/)
 
 
 처음 설치형 블로그를 만드려고 했던 계기가 커스터마이징을 쉽게 하기 위해서였기 때문에,  
