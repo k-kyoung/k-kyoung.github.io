@@ -29,10 +29,17 @@ github pages를 이용해서 블로그로 사용할 repository 입니다.
 발행은 포스팅된 md파일들을 html파일로 작성해서 미리 정의된 로컬 경로에 배포하는 작업입니다.  
 발행후 로컬서버에서 발행된 블로그를  확인할 수 있어야 합니다.
 
-1. 발행 api를 요청합니다.
-2. md 파일의 내용을 데이터화 합니다.
-3. 데이터화한 내용으로 html을 생성합니다.
-4. 발행된 경로로 브라우저를 실행합니다.
+1. 발행 api를 요청합니다. (Request)
+2. md 파일의 내용을 데이터화 합니다. (Collect)
+    1. 메뉴 정보를 수집 합니다.
+    2. 목록 정보를 수집 합니다.
+    3. 태그 정보를 수집 합니다.
+    4. 화면 정보를 수집 합니다.
+4. 데이터화한 내용으로 html을 생성합니다. (Generate)
+    1. 메뉴 html을 생성 합니다.
+    2. 목록 html을 생성 합니다.
+    3. 화면 html을 생성 합니다.
+6. 발행된 경로로 브라우저를 실행합니다.
 
 
 ## 배포 유스케이스
@@ -42,6 +49,19 @@ github pages를 이용해서 블로그로 사용할 repository 입니다.
 
 1. 배포 api를 요청합니다.
 2. 미리 정의된 git repository에 배포 합니다.
+
+
+## Domain 모델
+
+블로그 설정 정보
+    - 블로그 제목, 블로그 대표 이미지, 내 사진, Bio, Email
+
+- 메뉴
+    - 자식메뉴, 메뉴명, link url, 
+- 목록
+    - 제목, 미리보기 내용, link url, 태그목록, 등록일
+- 화면
+    - 제목, 내용, 태그목록, 등록일, 수정일, 다음 link url, 이전 link url
 
 
 ## v.1.0.0 Default Theme IA
@@ -76,6 +96,12 @@ v1.0.0 이후 지원을 위한 메뉴 정의, 먼저 초기버전을 완성한�
 처음 설치형 블로그를 만드려고 했던 계기가 커스터마이징을 쉽게 하기 위해서였기 때문에,  
 쉽게 커스터 마이징을 할 수 있게 많은 고민이 필요할 듯.  
 
-1. 시스템은 테마의 높은 자유도를 지원 해야함.
-2. 시스템은 테마의 기본적인 인터페이스를 제공 해야함.
+- 시스템은 테마의 높은 자유도를 지원 해야함.
+- 시스템은 테마의 기본적인 인터페이스를 제공 해야함.
 
+
+## 개발 참고
+
+[Tree 처리](https://stackoverflow.com/questions/1005551/construct-a-tree-structure-from-list-of-string-paths),
+[Replace 처리](https://stackoverflow.com/questions/8293709/how-to-replace-all-key-in-string/8293739),
+[Compare file](https://www.baeldung.com/java-compare-files),
