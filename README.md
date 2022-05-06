@@ -105,3 +105,5 @@ v1.0.0 이후 지원을 위한 메뉴 정의, 먼저 초기버전을 완성한�
 [Tree 처리](https://stackoverflow.com/questions/1005551/construct-a-tree-structure-from-list-of-string-paths),
 [Replace 처리](https://stackoverflow.com/questions/8293709/how-to-replace-all-key-in-string/8293739),
 [Compare file](https://www.baeldung.com/java-compare-files),
+[File read](https://stackoverflow.com/questions/326390/how-do-i-create-a-java-string-from-the-contents-of-a-file),
+[Parse key value](https://stackoverflow.com/questions/36141339/parse-key-value-pair-with-regular-expressions),  
