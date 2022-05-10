@@ -107,7 +107,5 @@ v1.0.0 이후 지원을 위한 메뉴 정의, 먼저 초기버전을 완성한�
 [Compare file](https://www.baeldung.com/java-compare-files),
 [File read](https://stackoverflow.com/questions/326390/how-do-i-create-a-java-string-from-the-contents-of-a-file),
 [Parse key value](https://stackoverflow.com/questions/36141339/parse-key-value-pair-with-regular-expressions),
-[Chain pattern](https://stackoverflow.com/questions/59451266/design-pattern-suggestion-implementation-using-java-8),
-[Functional pattern](https://theboreddev.com/functional-patterns-in-java/),
-[java design pattern](https://www.journaldev.com/1827/java-design-patterns-example-tutorial)
+[Chain pattern](https://stackoverflow.com/questions/59451266/design-pattern-suggestion-implementation-using-java-8),  
 
