@@ -108,5 +108,6 @@ v1.0.0 이후 지원을 위한 메뉴 정의, 먼저 초기버전을 완성한�
 [File read](https://stackoverflow.com/questions/326390/how-do-i-create-a-java-string-from-the-contents-of-a-file),
 [Parse key value](https://regex101.com/r/wE3dU7/4),
 [Chain pattern](https://stackoverflow.com/questions/59451266/design-pattern-suggestion-implementation-using-java-8),
-[utteranc](https://utteranc.es/)
+[utteranc](https://utteranc.es/),
+[jgit](https://github.com/centic9/jgit-cookbook)
 
