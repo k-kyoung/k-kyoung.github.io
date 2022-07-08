@@ -1,0 +1,138 @@
+<!doctype html>
+<html> 
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=1200"> 
+  <meta name="format-detection" content="telephone=no"> 
+  <title>포스트(2 of 2)</title> 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.min.css"> 
+  <link rel="stylesheet" type="text/css" href="../../css/reset.css"> 
+  <link rel="stylesheet" type="text/css" href="../../css/main.css"> 
+  <script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script> 
+  <script type="text/javascript" src="../../js/main.js"></script>
+ </head> 
+ <body> 
+  <div id="wrap"> <!-- main --> 
+   <main id="main">
+    <a href="../../index.html">markdown demo</a><he class="post_time">
+      2022-06-29 
+    </he> 
+    <div class="post_tag"> <span>#markdown</span><span>#demo</span> 
+    </div> 
+   </main> <!-- depth navigation --> 
+   <div id="lnbWrap">
+    <nav class="lnb"> 
+     <ul class="lnb_top"> 
+      <li class="menu"><a href="#" onclick="return false;">guts</a> 
+       <div class="sub"> 
+        <ul> 
+         <li class="sub_menu"><a href="../../guts/document/Guts-내용정의.html">document</a></li> 
+         <li class="sub_menu"><a href="../../guts/example/markdown-demo.html">example</a></li> 
+        </ul> 
+       </div></li> 
+     </ul> 
+    </nav> <!-- sub(2depth) background color --> 
+    <div class="sub_bg"></div> 
+   </div> 
+   <div id="contentWrap" class="markdown-body">
+    <div class="post_content"> 
+     <h1><a href="#an-h1-header" id="an-h1-header">An h1 header</a></h1> 
+     <p>Paragraphs are separated by a blank line.</p> 
+     <p>2nd paragraph. <em>Italic</em>, <strong>bold</strong>, and <code>monospace</code>. Itemized lists<br> look like:</p> 
+     <ul> 
+      <li>this one</li> 
+      <li>that one</li> 
+      <li>the other one</li> 
+     </ul> 
+     <p>Note that — not considering the asterisk — the actual text<br> content starts at 4-columns in.</p> 
+     <blockquote> 
+      <p>Block quotes are<br> written like so.</p> 
+      <p>They can span multiple paragraphs,<br> if you like.</p> 
+     </blockquote> 
+     <p>Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., “it’s all<br> in chapters 12–14”). Three dots … will be converted to an ellipsis.<br> Unicode is supported. ☺</p> 
+     <h2><a href="#an-h2-header" id="an-h2-header">An h2 header</a></h2> 
+     <p>Here’s a numbered list:</p> 
+     <ol> 
+      <li>first item</li> 
+      <li>second item</li> 
+      <li>third item</li> 
+     </ol> 
+     <p>Note again how the actual text starts at 4 columns in (4 characters<br> from the left side). Here’s a code sample:</p> 
+     <pre><code># Let me re-iterate ...
+for i in 1 .. 10 { do-something(i) }
+</code></pre> 
+     <p>As you probably guessed, indented 4 spaces. By the way, instead of<br> indenting the block, you can use delimited blocks, if you like:</p> 
+     <pre><code>define foobar() {
+    print "Welcome to flavor country!";
+}
+</code></pre> 
+     <p>(which makes copying &amp; pasting easier). You can optionally mark the<br> delimited block for Pandoc to syntax highlight it:</p> 
+     <pre><code class="language-python">import time
+# Quick, count to ten!
+for i in range(10):
+    # (but not *too* quick)
+    time.sleep(0.5)
+    print(i)
+</code></pre> 
+     <h3><a href="#an-h3-header" id="an-h3-header">An h3 header</a></h3> 
+     <p>Now a nested list:</p> 
+     <ol> 
+      <li> <p>First, get these ingredients:</p> 
+       <ul> 
+        <li>carrots</li> 
+        <li>celery</li> 
+        <li>lentils</li> 
+       </ul> </li> 
+      <li> <p>Boil some water.</p> </li> 
+      <li> <p>Dump everything in the pot and follow<br> this algorithm:</p> <p>find wooden spoon<br> uncover pot<br> stir<br> cover pot<br> balance wooden spoon precariously on pot handle<br> wait 10 minutes<br> goto first step (or shut off burner when done)</p> </li> 
+     </ol> 
+     <p>Do not bump wooden spoon or it will fall.</p> 
+     <p>Notice again how text always lines up on 4-space indents (including<br> that last line which continues item 3 above).</p> 
+     <p>Here’s a link to <a href="http://foo.bar">a website</a>, to a <a href="local-doc.html">local<br> doc</a>, and to a <a href="#an-h2-header">section heading in the current<br> doc</a>. Here’s a footnote [^1].</p> 
+     <p>[^1]: Some footnote text.</p> 
+     <p>Tables can look like this:</p> 
+     <p>Name Size Material Color<br> ————- —– ———— ————<br> All Business 9 leather brown<br> Roundabout 10 hemp canvas natural<br> Cinderella 11 glass transparent</p> 
+     <p>Table: Shoes sizes, materials, and colors.</p> 
+     <p>(The above is the caption for the table.) Pandoc also supports<br> multi-line tables:</p> 
+     <hr> 
+     <p>Keyword Text<br> ——– ———————–<br> red Sunsets, apples, and<br> other red or reddish<br> things.</p> 
+     <p>green Leaves, grass, frogs<br> and other things it’s<br> not easy being.<br> ——– ———————–</p> 
+     <p>A horizontal rule follows.</p> 
+     <hr> 
+     <p>Here’s a definition list:</p> 
+     <dl> 
+      <dt>
+        apples 
+      </dt> 
+      <dd>
+        Good for making applesauce. 
+      </dd> 
+      <dt>
+        oranges 
+      </dt> 
+      <dd>
+        Citrus! 
+      </dd> 
+      <dt>
+        tomatoes 
+      </dt> 
+      <dd>
+        There’s no “e” in tomatoe. 
+      </dd> 
+     </dl> 
+     <p>Again, text is indented 4 spaces. (Put a blank line between each<br> term and its definition to spread things out more.)</p> 
+     <p>Here’s a “line block” (note how whitespace is honored):</p> 
+     <p>| Line one<br> | Line too<br> | Line tree</p> 
+     <p>and images can be specified like so:</p> 
+     <p><img src="http://www.unexpected-vortices.com/sw/rippledoc/example-image.jpg" alt="example image" title="An exemplary image"></p> 
+     <p>Inline math equation: $\omega = d\phi / dt$. Display<br> math should get its own line like so:</p> 
+     <p>$$I = \int \rho R^{2} dV$$</p> 
+     <p>And note that you can backslash-escape any punctuation characters<br> which you wish to be displayed literally, ex.: `foo`, *bar*, etc.</p> 
+    </div> 
+    <div class="content_btn_wrap"> <a href="../../guts/document/Guts-내용정의.html"><button type="button" class="content_btn prev">&lt; prev</button></a><a href="#" onclick="return false;"><button type="button" class="content_btn next">next &gt;</button></a> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html> 
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=1200"> 
+  <meta name="format-detection" content="telephone=no"> 
+  <title>포스트(2 of 2)</title> 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.min.css"> 
+  <link rel="stylesheet" type="text/css" href="../../css/reset.css"> 
+  <link rel="stylesheet" type="text/css" href="../../css/main.css"> 
+  <script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script> 
+  <script type="text/javascript" src="../../js/main.js"></script>
+ </head> 
+ <body> 
+  <div id="wrap"> <!-- main --> 
+   <main id="main">
+    <a href="../../index.html">Guts 내용정의</a><he class="post_time">
+      2022-06-29 
+    </he> 
+    <div class="post_tag"> <span>#guts</span><span>#document</span> 
+    </div> 
+   </main> <!-- depth navigation --> 
+   <div id="lnbWrap">
+    <nav class="lnb"> 
+     <ul class="lnb_top"> 
+      <li class="menu"><a href="#" onclick="return false;">guts</a> 
+       <div class="sub"> 
+        <ul> 
+         <li class="sub_menu"><a href="../../guts/document/Guts-내용정의.html">document</a></li> 
+         <li class="sub_menu"><a href="../../guts/example/markdown-demo.html">example</a></li> 
+        </ul> 
+       </div></li> 
+     </ul> 
+    </nav> <!-- sub(2depth) background color --> 
+    <div class="sub_bg"></div> 
+   </div> 
+   <div id="contentWrap" class="markdown-body">
+    <div class="post_content"> 
+     <p>github pages를 이용해서 블로그로 사용할 repository 입니다.<br> 설치형 블로그를 개인 프로젝트를 통해 만들 생각이고, 그에대한 정리를 일단 이곳에서 합니다.</p> 
+     <h1><a href="#설치형-블로그-guts" id="설치형-블로그-guts">설치형 블로그 - Guts</a></h1> 
+     <h2><a href="#개요" id="개요">개요</a></h2> 
+     <p>기존에 사용하던 설치형블로그(hexo)를 커스텀 하고싶은데 쉽게 하지못해서 내가 만들게된 설치형 블로그,<br> 자바 기반으로 진행하고 테마나 화면등의 커스텀을 쉽게 할 수있게 심플하게 만드는게 목적입니다.</p> 
+     <h2><a href="#v100-요구사항-정의" id="v100-요구사항-정의">v.1.0.0 요구사항 정의</a></h2> 
+     <ol> 
+      <li>markdown(.md) 파일을 이용해서 html(정적)화면을 생성.</li> 
+      <li>theme 처리 기능이 필요.</li> 
+      <li>github repository로 배포기능 필요.</li> 
+     </ol> 
+     <h2><a href="#v100-이후-요구사항-정의" id="v100-이후-요구사항-정의">v.1.0.0 이후 요구사항 정의</a></h2> 
+     <ol> 
+      <li>관리화면 구성 필요.</li> 
+      <li>markdown 에디터 기능이 필요.</li> 
+      <li>h2 db 연동해서 데이터 처리 필요.</li> 
+      <li>발행및 배포시 progress 처리 필요.</li> 
+     </ol> 
+     <h2><a href="#발행-유스케이스" id="발행-유스케이스">발행 유스케이스</a></h2> 
+     <p>발행은 포스팅된 md파일들을 html파일로 작성해서 미리 정의된 로컬 경로에 배포하는 작업입니다.<br> 발행후 로컬서버에서 발행된 블로그를 확인할 수 있어야 합니다.</p> 
+     <ol> 
+      <li>발행 api를 요청합니다. (Request)</li> 
+      <li>md 파일의 내용을 데이터화 합니다. (Collect) 
+       <ol> 
+        <li>메뉴 정보를 수집 합니다.</li> 
+        <li>목록 정보를 수집 합니다.</li> 
+        <li>태그 정보를 수집 합니다.</li> 
+        <li>화면 정보를 수집 합니다.</li> 
+       </ol> </li> 
+      <li>데이터화한 내용으로 html을 생성합니다. (Generate) 
+       <ol> 
+        <li>메뉴 html을 생성 합니다.</li> 
+        <li>목록 html을 생성 합니다.</li> 
+        <li>화면 html을 생성 합니다.</li> 
+       </ol> </li> 
+      <li>발행된 경로로 브라우저를 실행합니다.</li> 
+     </ol> 
+     <h2><a href="#배포-유스케이스" id="배포-유스케이스">배포 유스케이스</a></h2> 
+     <p>배포는 로컬 경로에 발행된 html 정적 페이지들을 github repository에 배포하는 작업입니다.<br> 개인적으로는 필요없는 작업이지만 추후 나 이외의 사용자 인터페이스(UI)를 높이기 위해 추가합니다.</p> 
+     <ol> 
+      <li>배포 api를 요청합니다.</li> 
+      <li>미리 정의된 git repository에 배포 합니다.</li> 
+     </ol> 
+     <h2><a href="#domain-모델" id="domain-모델">Domain 모델</a></h2> 
+     <p>블로그 설정 정보<br> - 블로그 제목, 블로그 대표 이미지, 내 사진, Bio, Email</p> 
+     <ul> 
+      <li>메뉴 
+       <ul> 
+        <li>자식메뉴, 메뉴명, link url,</li> 
+       </ul> </li> 
+      <li>목록 
+       <ul> 
+        <li>제목, 미리보기 내용, link url, 태그목록, 등록일</li> 
+       </ul> </li> 
+      <li>화면 
+       <ul> 
+        <li>제목, 내용, 태그목록, 등록일, 수정일, 다음 link url, 이전 link url</li> 
+       </ul> </li> 
+     </ul> 
+     <h2><a href="#v100-default-theme-ia" id="v100-default-theme-ia">v.1.0.0 Default Theme IA</a></h2> 
+     <p>초기 기본 테마에 대한 메뉴 정의, 메뉴는 시스템이 지원하는 메뉴들로 테마에서 커스텀해서 사용하게 개발.<br> v1.0.0 이후에는 기본 테마의 IA도 추가하여 변경 해야함.</p> 
+     <ul> 
+      <li>메인 - 포스팅 목록</li> 
+      <li>검색 - 포스팅 검색</li> 
+     </ul> 
+     <h2><a href="#v100-이후-ia" id="v100-이후-ia">v.1.0.0 이후 IA</a></h2> 
+     <p>v1.0.0 이후 지원을 위한 메뉴 정의, 먼저 초기버전을 완성한뒤에 추가 Update 하는것이 목표.</p> 
+     <ul> 
+      <li>메인 - 메인 관리</li> 
+      <li>이력서 - 내 이력서 관리</li> 
+      <li>Document - 내 프로젝트 문서 관리</li> 
+      <li>책방 - 내가 읽었던 책 정리하는 공간</li> 
+      <li>Gallery - 사진 앨범</li> 
+     </ul> 
+     <h2><a href="#theme" id="theme">Theme</a></h2> 
+     <p>참고 테마<br> <a href="https://www.codeblocq.com/assets/projects/hexo-theme-phantom/">Phantom</a>,<br> <a href="https://louisbarranqueiro.github.io/hexo-theme-tranquilpeak/">Tranquilpeak</a>,<br> <a href="https://www.codeblocq.com/assets/projects/hexo-theme-magnetic/">Magnetic</a>,<br> <a href="https://www.codeblocq.com/">codeblocq</a></p> 
+     <p>처음 설치형 블로그를 만드려고 했던 계기가 커스터마이징을 쉽게 하기 위해서였기 때문에,<br> 쉽게 커스터 마이징을 할 수 있게 많은 고민이 필요할 듯.</p> 
+     <ul> 
+      <li>시스템은 테마의 높은 자유도를 지원 해야함.</li> 
+      <li>시스템은 테마의 기본적인 인터페이스를 제공 해야함.</li> 
+     </ul> 
+     <h2><a href="#개발-참고" id="개발-참고">개발 참고</a></h2> 
+     <p><a href="https://stackoverflow.com/questions/1005551/construct-a-tree-structure-from-list-of-string-paths">Tree 처리</a>,<br> <a href="https://stackoverflow.com/questions/8293709/how-to-replace-all-key-in-string/8293739">Replace 처리</a>,<br> <a href="https://www.baeldung.com/java-compare-files">Compare file</a>,<br> <a href="https://stackoverflow.com/questions/326390/how-do-i-create-a-java-string-from-the-contents-of-a-file">File read</a>,<br> <a href="https://regex101.com/r/wE3dU7/4">Parse key value</a>,<br> <a href="https://stackoverflow.com/questions/59451266/design-pattern-suggestion-implementation-using-java-8">Chain pattern</a>,<br> <a href="https://utteranc.es/">utteranc</a></p> 
+    </div> 
+    <div class="content_btn_wrap"> <a href="#" onclick="return false;"><button type="button" class="content_btn prev">&lt; prev</button></a><a href="../../guts/example/markdown-demo.html"><button type="button" class="content_btn next">next &gt;</button></a> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>
